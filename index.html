@@ -3,31 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FreshStart Cleaning Co. | Premium Residential & Commercial Cleaning</title>
-  <meta name="description" content="FreshStart Cleaning Co. — premium, reliable cleaning for homes and businesses. Book in minutes." />
+  <title>NextLevel Clean CT | Premium Residential & Commercial Cleaning</title>
+  <meta name="description" content="NextLevel Clean CT — premium, reliable cleaning for homes and businesses. Book in minutes." />
 
-  <!-- Fonts (optional, looks nicer) -->
+  <!-- Fonts (optional) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Blue / Grey palette */
-      --bg: #0b1220;
-      --panel: rgba(255,255,255,.06);
-      --panel-strong: rgba(255,255,255,.10);
-      --text: #e8eefc;
-      --muted: rgba(232,238,252,.72);
-      --muted2: rgba(232,238,252,.55);
+      /* Clean white theme + navy from "Next" */
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --surface2: #f6f8fb;
+      --line: rgba(16, 32, 72, .14);
 
-      --blue: #2f6bff;
-      --blue2:#1f4fe6;
-      --steel: #8fa2c6;
-      --line: rgba(255,255,255,.12);
+      --text: #0b1220;
+      --muted: rgba(11, 18, 32, .70);
+      --muted2: rgba(11, 18, 32, .55);
 
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --shadow2: 0 10px 30px rgba(0,0,0,.35);
+      --brand: #102048;   /* navy from logo (Next) */
+      --brand2:#0b1a3f;
+
+      --shadow: 0 18px 60px rgba(16, 32, 72, .10);
+      --shadow2: 0 10px 30px rgba(16, 32, 72, .08);
+
       --radius: 18px;
       --radius2: 26px;
 
@@ -40,69 +41,52 @@
       margin:0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      background: radial-gradient(1200px 700px at 20% 10%, rgba(47,107,255,.25), transparent 60%),
-                  radial-gradient(900px 600px at 90% 15%, rgba(143,162,198,.18), transparent 55%),
-                  radial-gradient(900px 600px at 50% 90%, rgba(47,107,255,.12), transparent 60%),
-                  linear-gradient(180deg, #070b14 0%, #0b1220 30%, #070b14 100%);
+      background: var(--bg);
       overflow-x:hidden;
     }
 
     a{ color:inherit; text-decoration:none; }
     button, input, select, textarea{ font:inherit; color:inherit; }
 
-    /* Subtle animated grain */
-    .grain{
-      pointer-events:none;
-      position:fixed; inset:0;
-      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="4" stitchTiles="stitch"/></filter><rect width="200" height="200" filter="url(%23n)" opacity=".18"/></svg>');
-      mix-blend-mode: overlay;
-      opacity:.35;
-      animation: grain 7s steps(2) infinite;
-    }
-    @keyframes grain{
-      0%{ transform:translate3d(0,0,0); }
-      25%{ transform:translate3d(-1%,2%,0); }
-      50%{ transform:translate3d(-2%,-1%,0); }
-      75%{ transform:translate3d(2%,1%,0); }
-      100%{ transform:translate3d(0,0,0); }
-    }
-
-    /* Layout */
     .container{ width:min(var(--max), calc(100% - 48px)); margin:0 auto; }
 
     header{
       position:sticky; top:0;
       z-index:20;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(7,11,20,.70), rgba(7,11,20,.35));
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 0;
       gap:14px;
     }
+
     .brand{
       display:flex; align-items:center; gap:12px;
       font-weight:800;
       letter-spacing:.2px;
     }
-    .logo{
-      width:38px; height:38px; border-radius:14px;
-      background:
-        radial-gradient(12px 12px at 30% 35%, rgba(255,255,255,.85), transparent 60%),
-        radial-gradient(18px 18px at 70% 65%, rgba(255,255,255,.35), transparent 60%),
-        linear-gradient(135deg, var(--blue) 0%, var(--blue2) 55%, rgba(143,162,198,.85) 120%);
-      box-shadow: 0 10px 28px rgba(47,107,255,.28);
-      border:1px solid rgba(255,255,255,.18);
+    /* Logo image (from your attached file) */
+    .logoImg{
+      width:52px;
+      height:auto;
+      display:block;
     }
     .brand span{ display:block; line-height:1.05; }
-    .brand small{ display:block; font-weight:600; color:var(--muted2); letter-spacing:.4px; margin-top:2px; }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:var(--muted2);
+      letter-spacing:.3px;
+      margin-top:2px;
+    }
 
     .navlinks{
       display:flex; align-items:center; gap:18px;
       color: var(--muted);
-      font-weight:600;
+      font-weight:700;
       font-size:14px;
     }
     .navlinks a{
@@ -111,7 +95,7 @@
       transition: background .2s ease, color .2s ease;
     }
     .navlinks a:hover{
-      background: rgba(255,255,255,.06);
+      background: rgba(16,32,72,.06);
       color: var(--text);
     }
 
@@ -121,26 +105,28 @@
       gap:10px;
       padding:12px 14px;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      background: #fff;
       color: var(--text);
-      font-weight:700;
+      font-weight:800;
       font-size:14px;
       cursor:pointer;
       transition: transform .15s ease, background .15s ease, border-color .15s ease;
-      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+      box-shadow: var(--shadow2);
     }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.22); }
+    .btn:hover{ transform: translateY(-1px); background: rgba(16,32,72,.03); border-color: rgba(16,32,72,.22); }
     .btn.primary{
-      background: linear-gradient(135deg, rgba(47,107,255,.95), rgba(31,79,230,.95));
-      border-color: rgba(255,255,255,.16);
-      box-shadow: 0 16px 40px rgba(47,107,255,.25);
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#fff;
+      border-color: rgba(16,32,72,.28);
+      box-shadow: 0 16px 40px rgba(16,32,72,.16);
     }
     .btn.primary:hover{ transform: translateY(-1px); }
+
     .btn .dot{
       width:8px; height:8px; border-radius:99px;
-      background: rgba(255,255,255,.92);
-      box-shadow: 0 0 0 6px rgba(255,255,255,.12);
+      background: var(--brand);
+      box-shadow: 0 0 0 6px rgba(16,32,72,.10);
     }
 
     /* Mobile nav */
@@ -148,20 +134,20 @@
     .mobilePanel{
       display:none;
       padding:12px 0 16px;
-      border-top: 1px solid rgba(255,255,255,.08);
+      border-top: 1px solid var(--line);
     }
     .mobilePanel a{
       display:block;
       padding:12px 12px;
       border-radius: 14px;
       color: var(--muted);
-      font-weight:700;
+      font-weight:800;
     }
-    .mobilePanel a:hover{ background: rgba(255,255,255,.06); color: var(--text); }
+    .mobilePanel a:hover{ background: rgba(16,32,72,.06); color: var(--text); }
 
     /* Hero */
     .hero{
-      padding: 62px 0 26px;
+      padding: 56px 0 18px;
       position:relative;
     }
     .heroGrid{
@@ -173,31 +159,31 @@
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
       padding:10px 12px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      background: var(--surface2);
       border-radius: 999px;
       color: var(--muted);
-      font-weight:700;
+      font-weight:800;
       font-size:13px;
     }
     .kicker .spark{
       width:18px; height:18px; border-radius: 8px;
-      background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.8), transparent 60%),
-                  linear-gradient(135deg, rgba(47,107,255,1), rgba(143,162,198,.9));
-      box-shadow: 0 10px 28px rgba(47,107,255,.22);
-      border: 1px solid rgba(255,255,255,.18);
+      background: linear-gradient(135deg, var(--brand), rgba(16,32,72,.70));
+      box-shadow: 0 10px 28px rgba(16,32,72,.14);
+      border: 1px solid rgba(16,32,72,.22);
     }
     h1{
       margin: 16px 0 12px;
       font-size: clamp(38px, 4vw, 56px);
       line-height: 1.05;
       letter-spacing: -1px;
+      color: var(--brand);
     }
     .lead{
       margin:0;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
       max-width: 60ch;
     }
     .heroCtas{
@@ -205,43 +191,31 @@
       margin-top: 22px;
     }
     .trust{
-      display:flex; gap:18px; flex-wrap:wrap;
-      margin-top: 22px;
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top: 18px;
       color: var(--muted2);
-      font-weight:600;
+      font-weight:700;
       font-size: 13px;
     }
     .pill{
       display:inline-flex; align-items:center; gap:10px;
       padding:10px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow2);
     }
-    .pill svg{ opacity:.9; }
 
-    /* Hero card (right) */
+    /* Right highlight card */
     .heroCard{
       border-radius: var(--radius2);
-      background:
-        radial-gradient(600px 240px at 30% 15%, rgba(47,107,255,.25), transparent 60%),
-        radial-gradient(500px 300px at 95% 30%, rgba(143,162,198,.18), transparent 65%),
-        rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.12);
+      background: #fff;
+      border: 1px solid var(--line);
       box-shadow: var(--shadow);
       overflow:hidden;
       position:relative;
     }
-    .heroCard::before{
-      content:"";
-      position:absolute; inset:-2px;
-      background:
-        linear-gradient(135deg, rgba(47,107,255,.35), rgba(143,162,198,.10), transparent 70%);
-      opacity:.55;
-      pointer-events:none;
-    }
     .heroCardInner{
-      position:relative;
       padding: 18px;
       display:flex;
       flex-direction:column;
@@ -256,18 +230,19 @@
     .stat{
       padding: 14px 14px;
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.12);
+      border: 1px solid var(--line);
+      background: var(--surface2);
       box-shadow: var(--shadow2);
     }
-    .stat .num{ font-weight:800; font-size: 22px; letter-spacing:-.5px; }
-    .stat .lbl{ color: var(--muted2); font-size: 12px; margin-top:4px; font-weight:650; }
+    .stat .num{ font-weight:900; font-size: 22px; letter-spacing:-.5px; color: var(--brand); }
+    .stat .lbl{ color: var(--muted2); font-size: 12px; margin-top:4px; font-weight:750; }
 
     .miniCard{
       padding: 16px;
       border-radius: 20px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.10);
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow2);
     }
     .miniRow{
       display:flex; align-items:flex-start; justify-content:space-between;
@@ -277,32 +252,33 @@
       display:inline-flex; align-items:center; gap:8px;
       padding: 8px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      background: var(--surface2);
       color: var(--muted);
-      font-weight:750;
+      font-weight:850;
       font-size: 12px;
     }
     .badge .check{
       width:16px; height:16px; border-radius:7px;
-      background: linear-gradient(135deg, rgba(47,107,255,1), rgba(31,79,230,1));
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
       display:grid; place-items:center;
-      box-shadow: 0 10px 22px rgba(47,107,255,.25);
+      box-shadow: 0 10px 22px rgba(16,32,72,.14);
     }
     .miniTitle{
-      font-weight:800;
+      font-weight:900;
       margin: 8px 0 6px;
       letter-spacing:-.3px;
+      color: var(--brand);
     }
     .miniText{
       margin:0;
       color: var(--muted);
       font-size: 13px;
-      line-height:1.6;
+      line-height:1.7;
     }
 
     /* Sections */
-    section{ padding: 50px 0; }
+    section{ padding: 44px 0; }
     .sectionHead{
       display:flex; align-items:flex-end; justify-content:space-between; gap:18px;
       margin-bottom: 18px;
@@ -311,13 +287,14 @@
       margin:0;
       font-size: 26px;
       letter-spacing:-.6px;
+      color: var(--brand);
     }
     .sectionHead p{
       margin:0;
       color: var(--muted);
       max-width: 60ch;
       line-height:1.7;
-      font-weight:550;
+      font-weight:600;
     }
 
     .grid3{
@@ -327,8 +304,8 @@
     }
     .card{
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      background: #fff;
       box-shadow: var(--shadow2);
       padding: 18px;
       position:relative;
@@ -337,18 +314,19 @@
     }
     .card:hover{
       transform: translateY(-2px);
-      background: rgba(255,255,255,.07);
-      border-color: rgba(255,255,255,.20);
+      background: rgba(16,32,72,.02);
+      border-color: rgba(16,32,72,.22);
     }
     .icon{
       width:42px; height:42px; border-radius: 16px;
       display:grid; place-items:center;
-      background: linear-gradient(135deg, rgba(47,107,255,.95), rgba(143,162,198,.85));
-      border: 1px solid rgba(255,255,255,.16);
-      box-shadow: 0 16px 36px rgba(47,107,255,.16);
+      background: rgba(16,32,72,.08);
+      border: 1px solid rgba(16,32,72,.16);
+      color: var(--brand);
+      box-shadow: 0 16px 36px rgba(16,32,72,.08);
     }
-    .card h3{ margin: 12px 0 8px; letter-spacing:-.3px; }
-    .card p{ margin:0; color: var(--muted); line-height:1.65; font-size: 14px; }
+    .card h3{ margin: 12px 0 8px; letter-spacing:-.3px; color: var(--brand); }
+    .card p{ margin:0; color: var(--muted); line-height:1.7; font-size: 14px; }
 
     .split{
       display:grid;
@@ -365,17 +343,19 @@
       display:flex; gap:10px; align-items:flex-start;
       padding: 12px 12px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      background: var(--surface2);
+      box-shadow: var(--shadow2);
     }
     .li .tick{
       width:22px; height:22px; border-radius: 10px;
-      background: rgba(47,107,255,.18);
-      border: 1px solid rgba(47,107,255,.28);
+      background: rgba(16,32,72,.10);
+      border: 1px solid rgba(16,32,72,.18);
       display:grid; place-items:center;
       margin-top: 1px;
+      color: var(--brand);
     }
-    .li strong{ display:block; }
+    .li strong{ display:block; color: var(--brand); }
     .li span{ color: var(--muted); font-size: 13px; line-height:1.6; display:block; margin-top:2px; }
 
     /* Pricing */
@@ -388,18 +368,15 @@
     .price{
       padding: 18px;
       border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      background: #fff;
       box-shadow: var(--shadow2);
       position:relative;
       overflow:hidden;
     }
     .price.popular{
-      border-color: rgba(47,107,255,.35);
-      background:
-        radial-gradient(600px 260px at 20% 0%, rgba(47,107,255,.22), transparent 70%),
-        rgba(255,255,255,.06);
-      box-shadow: 0 24px 70px rgba(47,107,255,.12), var(--shadow2);
+      border-color: rgba(16,32,72,.28);
+      box-shadow: 0 24px 70px rgba(16,32,72,.10), var(--shadow2);
     }
     .price .top{
       display:flex; align-items:center; justify-content:space-between; gap:12px;
@@ -407,33 +384,31 @@
     }
     .tag{
       font-size: 12px;
-      font-weight:800;
-      color: rgba(255,255,255,.92);
+      font-weight:900;
+      color: var(--brand);
       padding: 8px 10px;
       border-radius: 999px;
-      background: rgba(47,107,255,.22);
-      border: 1px solid rgba(47,107,255,.35);
+      background: rgba(16,32,72,.08);
+      border: 1px solid rgba(16,32,72,.18);
     }
-    .price h3{ margin:0; letter-spacing:-.3px; }
+    .price h3{ margin:0; letter-spacing:-.3px; color: var(--brand); }
     .price .desc{ margin: 8px 0 12px; color: var(--muted); line-height:1.6; font-size: 13px; }
     .money{
       display:flex; align-items:flex-end; gap:8px;
       margin: 10px 0 14px;
     }
-    .money .amt{ font-size: 34px; font-weight:900; letter-spacing:-1px; }
-    .money .per{ color: var(--muted2); font-weight:700; font-size: 13px; margin-bottom: 6px; }
+    .money .amt{ font-size: 34px; font-weight:950; letter-spacing:-1px; color: var(--brand); }
+    .money .per{ color: var(--muted2); font-weight:800; font-size: 13px; margin-bottom: 6px; }
 
     .bullets{ display:grid; gap:8px; margin: 0 0 14px; padding:0; list-style:none; }
-    .bullets li{ display:flex; gap:10px; color: var(--muted); font-weight:650; font-size: 13px; }
-    .bullets svg{ flex:0 0 auto; margin-top: 2px; opacity:.9; }
+    .bullets li{ display:flex; gap:10px; color: var(--muted); font-weight:750; font-size: 13px; }
+    .bullets svg{ flex:0 0 auto; margin-top: 2px; opacity:.95; color: var(--brand); }
 
     /* Booking */
     .bookingWrap{
       border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.12);
-      background:
-        radial-gradient(700px 260px at 10% 0%, rgba(47,107,255,.22), transparent 70%),
-        rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      background: #fff;
       box-shadow: var(--shadow);
       overflow:hidden;
     }
@@ -444,31 +419,31 @@
     }
     .bookingLeft{
       padding: 22px;
-      border-right: 1px solid rgba(255,255,255,.10);
+      border-right: 1px solid var(--line);
+      background: #fff;
     }
     .bookingRight{
       padding: 22px;
-      background: rgba(0,0,0,.12);
+      background: var(--surface2);
     }
 
     form{ display:grid; gap:10px; margin-top: 12px; }
     .row2{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
-    label{ font-size: 12px; color: var(--muted2); font-weight:750; }
-    .field{
-      display:grid; gap:6px;
-    }
+    label{ font-size: 12px; color: var(--muted2); font-weight:850; }
+    .field{ display:grid; gap:6px; }
+
     input, select, textarea{
       width:100%;
       padding: 12px 12px;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      background: #fff;
       outline:none;
       transition: border-color .15s ease, background .15s ease;
     }
     input:focus, select:focus, textarea:focus{
-      border-color: rgba(47,107,255,.45);
-      background: rgba(255,255,255,.07);
+      border-color: rgba(16,32,72,.45);
+      background: rgba(16,32,72,.02);
     }
     textarea{ min-height: 96px; resize: vertical; }
     .note{
@@ -482,18 +457,18 @@
       margin-top: 12px;
       padding: 12px 12px;
       border-radius: 16px;
-      border: 1px solid rgba(47,107,255,.35);
-      background: rgba(47,107,255,.12);
-      color: rgba(232,238,252,.92);
-      font-weight:700;
+      border: 1px solid rgba(16,32,72,.22);
+      background: rgba(16,32,72,.06);
+      color: var(--brand);
+      font-weight:850;
       font-size: 13px;
     }
 
     /* Footer */
     footer{
       padding: 34px 0 40px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(7,11,20,.0), rgba(7,11,20,.55));
+      border-top: 1px solid var(--line);
+      background: #fff;
     }
     .foot{
       display:flex; align-items:flex-start; justify-content:space-between;
@@ -504,10 +479,10 @@
     .footLinks{
       display:flex; gap:14px; flex-wrap:wrap;
       color: var(--muted);
-      font-weight:700;
+      font-weight:800;
       font-size: 13px;
     }
-    .footLinks a:hover{ color: var(--text); }
+    .footLinks a:hover{ color: var(--brand); }
 
     /* Reveal on scroll */
     .reveal{
@@ -527,15 +502,17 @@
       .grid3{ grid-template-columns: 1fr; }
       .pricing{ grid-template-columns: 1fr; }
       .bookingGrid{ grid-template-columns: 1fr; }
-      .bookingLeft{ border-right:none; border-bottom: 1px solid rgba(255,255,255,.10); }
+      .bookingLeft{ border-right:none; border-bottom: 1px solid var(--line); }
+
       .navlinks{ display:none; }
       .hamburger{
         display:inline-flex;
         padding:12px 14px;
         border-radius: 14px;
-        border: 1px solid rgba(255,255,255,.14);
-        background: rgba(255,255,255,.06);
+        border: 1px solid var(--line);
+        background: #fff;
         cursor:pointer;
+        box-shadow: var(--shadow2);
       }
       .mobilePanel{ display:none; }
       .mobilePanel.open{ display:block; }
@@ -544,16 +521,15 @@
 </head>
 
 <body>
-  <div class="grain"></div>
-
   <header>
     <div class="container">
       <div class="nav">
-        <a class="brand" href="#top" aria-label="FreshStart Cleaning Co.">
-          <div class="logo" aria-hidden="true"></div>
+        <a class="brand" href="#top" aria-label="NextLevel Clean CT">
+          <!-- Put this file in the same folder as this HTML (or update the src path) -->
+          <img class="logoImg" src="NextLevel Clean CT logo design.png" alt="NextLevel Clean CT logo" />
           <div>
-            <span>FreshStart Cleaning Co.</span>
-            <small>Blue-glove service. Grey-matter reliability.</small>
+            <span>NextLevel Clean CT</span>
+            <small>Clean, consistent, professional.</small>
           </div>
         </a>
 
@@ -601,7 +577,7 @@
 
             <h1>Immaculate spaces, delivered with quiet confidence.</h1>
             <p class="lead">
-              FreshStart Cleaning Co. provides polished, consistent cleaning with a professional crew,
+              NextLevel Clean CT provides polished, consistent cleaning with a professional crew,
               flexible scheduling, and checklists that ensure the same high standard every visit.
             </p>
 
@@ -692,25 +668,19 @@
 
         <div class="grid3">
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">
-              🏡
-            </div>
+            <div class="icon" aria-hidden="true">🏡</div>
             <h3>Residential Cleaning</h3>
             <p>Recurring or one-time cleanings for apartments, condos, and homes — from kitchens to baseboards.</p>
           </article>
 
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">
-              🏢
-            </div>
+            <div class="icon" aria-hidden="true">🏢</div>
             <h3>Commercial Cleaning</h3>
             <p>Offices, studios, and retail spaces. After-hours availability with consistent checklists.</p>
           </article>
 
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">
-              ✨
-            </div>
+            <div class="icon" aria-hidden="true">✨</div>
             <h3>Deep Clean / Move-In-Out</h3>
             <p>Detail-driven resets: inside appliances, grout attention, and high-touch sanitization.</p>
           </article>
@@ -818,7 +788,7 @@
         <div class="pricing">
           <div class="price reveal">
             <div class="top">
-              <h3>FreshStart Basic</h3>
+              <h3>NextLevel Basic</h3>
               <span class="tag">Great value</span>
             </div>
             <p class="desc">Perfect for maintenance cleanings and smaller spaces.</p>
@@ -914,17 +884,17 @@
           <article class="card reveal">
             <h3 style="margin-top:0;">“Spotless and punctual.”</h3>
             <p>They arrived on time, followed the checklist perfectly, and my kitchen looked brand new.</p>
-            <p style="margin-top:12px; color:var(--muted2); font-weight:750;">— Jordan M.</p>
+            <p style="margin-top:12px; color:var(--muted2); font-weight:850;">— Jordan M.</p>
           </article>
           <article class="card reveal">
             <h3 style="margin-top:0;">“Actually professional.”</h3>
             <p>Clear communication, fair pricing, and the details were done right. Highly recommend.</p>
-            <p style="margin-top:12px; color:var(--muted2); font-weight:750;">— Sam R.</p>
+            <p style="margin-top:12px; color:var(--muted2); font-weight:850;">— Sam R.</p>
           </article>
           <article class="card reveal">
             <h3 style="margin-top:0;">“Best move-out clean.”</h3>
             <p>We got our deposit back. The walkthrough was smooth and the place looked amazing.</p>
-            <p style="margin-top:12px; color:var(--muted2); font-weight:750;">— Taylor K.</p>
+            <p style="margin-top:12px; color:var(--muted2); font-weight:850;">— Taylor K.</p>
           </article>
         </div>
       </div>
@@ -943,7 +913,7 @@
         <div class="bookingWrap reveal">
           <div class="bookingGrid">
             <div class="bookingLeft">
-              <h3 style="margin:0 0 6px; letter-spacing:-.3px;">Request a quote</h3>
+              <h3 style="margin:0 0 6px; letter-spacing:-.3px; color:var(--brand);">Request a quote</h3>
               <p style="margin:0; color:var(--muted); line-height:1.7;">
                 Tell us what you need. We’ll confirm scope, pricing, and preferred times.
               </p>
@@ -1016,23 +986,24 @@
             </div>
 
             <div class="bookingRight">
-              <h3 style="margin:0 0 10px; letter-spacing:-.3px;">Contact</h3>
+              <h3 style="margin:0 0 10px; letter-spacing:-.3px; color:var(--brand);">Contact</h3>
 
               <div class="card" style="margin-bottom:12px;">
-                <p style="margin:0; color:var(--muted2); font-weight:750; font-size:12px;">Phone</p>
-                <p style="margin:6px 0 0; font-weight:850;">(555) 555-0123</p>
+                <p style="margin:0; color:var(--muted2); font-weight:850; font-size:12px;">Phone</p>
+                <p style="margin:6px 0 0; font-weight:950; color:var(--brand);">(555) 555-0123</p>
               </div>
 
               <div class="card" style="margin-bottom:12px;">
-                <p style="margin:0; color:var(--muted2); font-weight:750; font-size:12px;">Email</p>
-                <p style="margin:6px 0 0; font-weight:850;">hello@freshstartcleaning.co</p>
+                <p style="margin:0; color:var(--muted2); font-weight:850; font-size:12px;">Email</p>
+                <!-- UPDATED EMAIL -->
+                <p style="margin:6px 0 0; font-weight:950; color:var(--brand);">info@nextlevelcleanct.com</p>
               </div>
 
               <div class="card">
-                <p style="margin:0; color:var(--muted2); font-weight:750; font-size:12px;">Service Area</p>
-                <p style="margin:6px 0 0; font-weight:850;">Your City + surrounding areas</p>
+                <p style="margin:0; color:var(--muted2); font-weight:850; font-size:12px;">Service Area</p>
+                <p style="margin:6px 0 0; font-weight:950; color:var(--brand);">Your City + surrounding areas</p>
                 <p style="margin:10px 0 0; color:var(--muted); line-height:1.7;">
-                  Want this to look even more premium? Add professional photos and replace the contact details
+                  Want this to look even more premium? Add professional photos and replace the phone number
                   with your real info.
                 </p>
               </div>
@@ -1053,15 +1024,16 @@
       <div class="foot">
         <div style="max-width: 520px;">
           <div class="brand" style="margin-bottom:10px;">
-            <div class="logo" aria-hidden="true"></div>
+            <img class="logoImg" src="NextLevel Clean CT logo design.png" alt="NextLevel Clean CT logo" />
             <div>
-              <span>FreshStart Cleaning Co.</span>
+              <span>NextLevel Clean CT</span>
               <small>Premium cleaning, beautifully consistent.</small>
             </div>
           </div>
           <small>
-            © <span id="year"></span> FreshStart Cleaning Co. All rights reserved.<br/>
-            Licensed • Insured • Professional service standards.
+            © <span id="year"></span> NextLevel Clean CT. All rights reserved.<br/>
+            Licensed • Insured • Professional service standards.<br/>
+            Contact: <strong>info@nextlevelcleanct.com</strong>
           </small>
         </div>
 
@@ -1122,13 +1094,13 @@
     const success = document.getElementById('success');
     form?.addEventListener('submit', (e) => {
       e.preventDefault();
-      // In production: send to backend (fetch/axios) then show success.
       success.style.display = 'block';
-      form.querySelector('button[type="submit"]').textContent = 'Submitted ✓';
-      form.querySelector('button[type="submit"]').disabled = true;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Submitted ✓';
+      btn.disabled = true;
     });
 
-    // Default date: tomorrow (nice UX)
+    // Default date: tomorrow
     const dateInput = document.getElementById('date');
     if (dateInput) {
       const d = new Date();
